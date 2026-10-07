@@ -1,6 +1,8 @@
+
 # ingles2
 para mostrar en la prueba de ingles 2
 
+```mermaid
 flowchart LR
     HTML["html (lang=es)"] --> HEAD["head"]
     HTML --> BODY["body"]
