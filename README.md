@@ -8,31 +8,31 @@ flowchart LR
     HTML --> BODY["body"]
 
     %% Contenido de head
-    HEAD --> H_META["Metadatos (SEO & OpenGraph)"]
-    HEAD --> H_LINKS["Recursos & Estilos CSS"]
+    HEAD --> META["Metadatos SEO & OpenGraph"]
+    HEAD --> LINKS["Estilos y Librerías (Bootstrap, FontAwesome, Google Fonts)"]
 
     %% Contenido de body
     BODY --> ASIDE["Barra Social Flotante"]
-    BODY --> NAV["Navbar & Menú"]
-    BODY --> HEADER["Hero Section (Inicio)"]
-    
-    %% Sección Servicios Agrupada
-    BODY --> SEV_SEC["Sección Servicios"]
-    subgraph Servicios [Lista de Masajes y Terapias]
+    BODY --> NAV["Navbar (Menú de Navegación)"]
+    BODY --> HERO["Hero / Carrusel Principal"]
+
+    %% Sección Servicios agrupada
+    BODY --> SERVICIOS["Sección Servicios (#servicios)"]
+    subgraph ListaServicios [Catálogo de Terapias]
         direction TB
-        S1["Masajes a cuatro manos"]
-        S2["Masaje cráneo facial"]
-        S3["Descontracturante"]
-        S4["Drenaje linfático"]
-        S5["Dúo & Madera"]
-        S6["4x3 & Piedras calientes"]
+        S1["Masajes a cuatro manos ($80k)"]
+        S2["Masaje cráneo facial ($40k)"]
+        S3["Descontracturante ($40k)"]
+        S4["Drenaje linfático ($40k)"]
+        S5["Dúo ($80k)"]
+        S6["Madera ($40k)"]
+        S7["Promoción 4x3 ($120k)"]
     end
-    SEV_SEC --> Servicios
+    SERVICIOS --> ListaServicios
 
-    BODY --> FAQ_SEC["Sección FAQ (Preguntas)"]
     BODY --> FOOTER["Footer & Contacto"]
-    BODY --> DIALOG["Modal de Reservas"]
+    BODY --> MODAL["Modal Nativo de Reservas (Calendly)"]
 
-    %% Estilos limpios
+    %% Estilos de nodos principales
     classDef main fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
-    class HTML,HEAD,BODY,NAV,HEADER,SEV_SEC,FAQ_SEC,FOOTER,DIALOG main;
+    class HTML,HEAD,BODY,ASIDE,NAV,HERO,SERVICIOS,FOOTER,MODAL main;
