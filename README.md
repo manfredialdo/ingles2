@@ -12,7 +12,7 @@ flowchart LR
 
     %% Contenido de head
     HEAD --> META["Metadatos SEO & OpenGraph"]
-    HEAD --> LINKS["Estilos y Librerías (Bootstrap, FontAwesome, Google Fonts)"]
+    HEAD --> LINKS["Estilos y Librerías (FontAwesome, Google Fonts)"]
 
     %% Contenido de body
     BODY --> ASIDE["Barra Social Flotante"]
