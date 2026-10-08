@@ -4,213 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEKKO | Masajes y Depilación Definitiva - El Calafate</title>
-    <meta name="description" content="GEKKO: Recuperación muscular. Masajes terapéuticos, descontracturantes y depilación definitiva en El Calafate. ">
+    <meta name="description" content="GEKKO: Recuperación muscular. Masajes terapéuticos, descontracturantes y depilación definitiva en El Calafate.">
     <meta name="keywords" content="masajes calafate, depilacion definitiva el calafate, masajes deportivos, drenaje linfatico, bienestar calafate">
     <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://xdemo.pythonanywhere.com/">
     <meta property="og:title" content="GEKKO | Bienestar y Recuperación en Calafate">
     <meta property="og:description" content="Masajes terapéuticos y depilación definitiva. Reservá tu sesión de bienestar hoy.">
     <meta property="og:image" content="/static/img/preview-gekko.jpg">
     <meta property="og:locale" content="es_AR">
+    
     <link rel="icon" type="image/png" href="https://xdemo.pythonanywhere.com/static/img/favicon.png">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Hoja de Estilos Unificada -->
     <link rel="stylesheet" href="static/css/style.css">
-
-    <style>
-        :root {
-            --color-lagarto: #1e352f;
-            --color-detalle: #b49682;
-            --color-oscuro: #162622;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--color-lagarto);
-            color: white;
-            overflow-x: hidden;
-        }
-
-
-
-        /* --- BARRA SOCIAL FLOTANTE --- */
-        .social-float {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            z-index: 2000; /* Por encima de todo */
-        }
-
-        .social-float a {
-            width: 45px;
-            height: 45px;
-            background-color: var(--color-detalle);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-
-        .social-float a:hover {
-            transform: scale(1.1) translateX(-5px);
-            background-color: white;
-            color: var(--color-lagarto);
-        }
-
-        /* Ocultar en móviles para no tapar contenido si lo preferís */
-        @media (max-width: 768px) {
-            .social-float {
-                bottom: 20px;
-                top: auto;
-                right: 10px;
-                transform: none;
-                flex-direction: row;
-            }
-        }
-
-
-
-
-
-        /* --- EFECTO PINCEL (CURSOR TRAIL) --- */
-        .cursor-trail {
-            position: fixed;
-            z-index: 1;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            pointer-events: none;
-            filter: blur(15px);
-            mix-blend-mode: screen;
-            opacity: 0.6;
-            animation: fade-out 2s forwards;
-        }
-        @keyframes fade-out {
-            0% { transform: scale(1); opacity: 0.4; }
-            100% { transform: scale(4); opacity: 0; }
-        }
-
-        /* --- NAVBAR --- */
-        .navbar {
-            background-color: rgba(30, 53, 47, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(180, 150, 130, 0.2);
-        }
-        .navbar-brand { font-family: 'Playfair Display', serif; letter-spacing: 4px; color: var(--color-detalle) !important; }
-        .nav-link { color: white !important; font-weight: 300; letter-spacing: 1px; }
-        .btn-reservar { background-color: var(--color-detalle); color: white; border-radius: 0; transition: 0.3s; }
-        .btn-reservar:hover { background-color: #967d6a; transform: translateY(-2px); }
-
-        /* --- HERO (CARRUSEL CROSSFADE) --- */
-        .hero-gekko { height: 50vh; position: relative; min-height: 350px;}
-        .carousel-item { height: 85vh; min-height: 350px; background-size: cover; background-position: center; }
-        .overlay-dark {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to bottom, rgba(30,53,47,0.5), var(--color-lagarto));
-        }
-        .title-hero { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 8vw, 5rem); }
-
-        /* --- CARDS & SERVICIOS --- */
-        .section-textured { background-color: var(--color-lagarto); position: relative; z-index: 5; }
-        .card-gekko {
-            background: var(--color-oscuro);
-            border: none;
-            border-radius: 0;
-            transition: 0.4s;
-            overflow: hidden;
-            border-bottom: 3px solid transparent;
-        }
-        .card-gekko:hover { transform: translateY(-10px); border-bottom: 3px solid var(--color-detalle); transform: scale(1.05); filter: brightness(0.9) !important; }
-
-    .btn-outline-detalle:hover {
-        background-color: var(--color-detalle) !important;
-        color: white !important;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    }
-    .ls-2 { letter-spacing: 2px; }
-
-
-
-        .card-img-wrapper { height: 250px; overflow: hidden; position: relative; }
-        .card-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: 0.5s; }
-        .card-gekko:hover .card-img { scale: 1.1; opacity: 1; }
-        .badge-category {
-            position: absolute; top: 15px; right: 15px;
-            background: var(--color-detalle); color: white;
-            padding: 5px 15px; font-size: 0.7rem; text-transform: uppercase;
-        }
-        .price-pill { color: var(--color-detalle); font-weight: 600; font-size: 1.2rem; }
-
-        /* --- ACORDEÓN FAQ --- */
-        .accordion-item { background: transparent; border: 1px solid rgba(180,150,130,0.2) !important; color: white; margin-bottom: 10px; }
-        .accordion-button { background: transparent !important; color: white !important; box-shadow: none !important; }
-        .accordion-button::after { filter: invert(1); }
-
-        /* --- FOOTER --- */
-        footer { background-color: var(--color-oscuro); border-top: 1px solid rgba(180,150,130,0.1); }
-        .social-footer { color: var(--color-detalle); font-size: 1.5rem; transition: 0.3s; }
-        .social-footer:hover { color: white; }
-
-        /* --- UI ELEMENTS --- */
-        .divider-short { width: 50px; height: 3px; background: var(--color-detalle); margin: 20px auto; }
-        .spinner-grow { width: 3rem; height: 3rem; color: var(--color-detalle); }
-
-        /* --- NUEVO EFECTO EDITORIAL (ZOOM) --- */
-
-        /* Contenedor de imagen con transición suave */
-        .row.align-items-center img {
-            transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease !important;
-        }
-
-        /* Cuando pasamos el mouse por cualquier parte de la fila del servicio */
-        .row.align-items-center:hover img {
-            transform: scale(1.08); /* El efecto de zoom */
-            filter: brightness(0.8) contrast(1.1); /* Mejora el impacto visual */
-        }
-
-        /* Animación para que el botón también reaccione al hover de la fila */
-        .row.align-items-center:hover .btn-outline-detalle {
-            background-color: var(--color-detalle) !important;
-            color: white !important;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            transform: translateY(-3px);
-        }
-
-        .btn-outline-detalle {
-            transition: all 0.4s ease !important;
-        }
-
-        /* Ajuste para que el fondo fijo no se rompa en móviles */
-        @media (max-width: 991px) {
-            #servicios {
-                background-attachment: scroll !important;
-            }
-        }
-    </style>
 </head>
 <body>
-    <!-- Floating social bar -->
+
+    <!-- Barra Social Flotante -->
     <aside class="social-float">
         <a href="#" class="social-whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         <a href="#" class="social-instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="#" class="social-facebook" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
     </aside>
 
-    <!-- NAVBAR -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <a class="navbar-brand" href="#">GEKKO</a>
             
-            <!-- Checkbox Hack para menú responsivo sin JS -->
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <label for="nav-toggle" class="nav-toggle-label">
                 <span></span>
@@ -227,7 +57,7 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION (Sin Carousel Bootstrap) -->
+    <!-- Hero Section -->
     <header id="inicio" class="hero-gekko">
         <div class="hero-bg">
             <img src="static/img/loem7ploem7ploem.png" alt="Gekko Bienestar" class="hero-img">
@@ -239,7 +69,7 @@
         </div>
     </header>
 
-    <!-- SECCIÓN SERVICIOS -->
+    <!-- Sección Servicios -->
     <section id="servicios" class="section-servicios">
         <div class="container">
             <div class="section-header">
@@ -257,7 +87,7 @@
                 <div class="service-info">
                     <div class="duration"><i class="far fa-clock"></i> 60 MIN</div>
                     <h3 class="service-title">masajes a cuatro manos</h3>
-                    <p class="service-desc">Los terapeutas utilizan movimientos coordinados (a menudo en espejo) que envuelven el cuerpo, facilitando la desconexión mental al no poder predecir el siguiente movimiento</p>
+                    <p class="service-desc">Los terapeutas utilizan movimientos coordinados (a menudo en espejo) que envuelven el cuerpo, facilitando la desconexión mental al no poder predecir el siguiente movimiento.</p>
                     <div class="price-row">
                         <span class="price">$80.000</span>
                         <div class="line"></div>
@@ -268,7 +98,7 @@
 
             <div class="divider-line"></div>
 
-            <!-- Servicio 2 (Invertido) -->
+            <!-- Servicio 2 -->
             <article class="service-card reverse">
                 <div class="service-img-wrapper">
                     <img src="static/uploads/86bb886ec0da43de84941a3b671292aa.jpg" alt="masaje craneo facial" class="service-img">
@@ -308,16 +138,16 @@
 
             <div class="divider-line"></div>
 
-            <!-- Servicio 4 (Invertido) -->
+            <!-- Servicio 4 -->
             <article class="service-card reverse">
                 <div class="service-img-wrapper">
-                    <img src="static/uploads/f0d0d688b1754532b69d2a55a3ce6a4d.jpg" alt="denaje linfatico" class="service-img">
+                    <img src="static/uploads/f0d0d688b1754532b69d2a55a3ce6a4d.jpg" alt="drenaje linfatico" class="service-img">
                     <span class="badge-tag">masaje</span>
                 </div>
                 <div class="service-info">
                     <div class="duration"><i class="far fa-clock"></i> 60 MIN</div>
-                    <h3 class="service-title">denaje linfatico</h3>
-                    <p class="service-desc">Reduce la hinchazón y retención de líquidos. Mejora el sistema inmunológico y depura el organismo. Ayuda en la recuperación de cirugías</p>
+                    <h3 class="service-title">drenaje linfatico</h3>
+                    <p class="service-desc">Reduce la hinchazón y retención de líquidos. Mejora el sistema inmunológico y depura el organismo. Ayuda en la recuperación de cirugías.</p>
                     <div class="price-row">
                         <span class="price">$40.000</span>
                         <div class="line"></div>
@@ -337,7 +167,7 @@
                 <div class="service-info">
                     <div class="duration"><i class="far fa-clock"></i> 60 MIN</div>
                     <h3 class="service-title">duo</h3>
-                    <p class="service-desc">relajación simultánea para dos personas en la misma sala, realizada por dos terapeutas.</p>
+                    <p class="service-desc">Relajación simultánea para dos personas en la misma sala, realizada por dos terapeutas.</p>
                     <div class="price-row">
                         <span class="price">$80.000</span>
                         <div class="line"></div>
@@ -348,15 +178,15 @@
 
             <div class="divider-line"></div>
 
-            <!-- Servicio 6 (Invertido) -->
+            <!-- Servicio 6 -->
             <article class="service-card reverse">
                 <div class="service-img-wrapper">
-                    <img src="static/uploads/acc7e64c916b432fb82a6c89362bbcac.jpg" alt="madera" class="service-img">
+                    <img src="static/uploads/acc7e64c916b432fb82a6c89362bbcac.jpg" alt="maderoterapia" class="service-img">
                     <span class="badge-tag">masaje</span>
                 </div>
                 <div class="service-info">
                     <div class="duration"><i class="far fa-clock"></i> 60 MIN</div>
-                    <h3 class="service-title">madera</h3>
+                    <h3 class="service-title">maderoterapia</h3>
                     <p class="service-desc">Moldea la figura, reduce grasa/celulitis, reafirma la piel y mejora la circulación.</p>
                     <div class="price-row">
                         <span class="price">$40.000</span>
@@ -376,8 +206,8 @@
                 </div>
                 <div class="service-info">
                     <div class="duration"><i class="far fa-clock"></i> 240 MIN</div>
-                    <h3 class="service-title">4x3</h3>
-                    <p class="service-desc">4 masajes al precio de 3</p>
+                    <h3 class="service-title">combo 4x3</h3>
+                    <p class="service-desc">Pack de 4 masajes al precio de 3.</p>
                     <div class="price-row">
                         <span class="price">$120.000</span>
                         <div class="line"></div>
@@ -388,7 +218,7 @@
 
             <div class="divider-line"></div>
 
-            <!-- Servicio 8 (Invertido) -->
+            <!-- Servicio 8 -->
             <article class="service-card reverse">
                 <div class="service-img-wrapper">
                     <img src="static/uploads/a4a66aeeed17473cb1b66e33c3f57e1f.png" alt="piedras calientes" class="service-img">
@@ -397,7 +227,7 @@
                 <div class="service-info">
                     <div class="duration"><i class="far fa-clock"></i> 20 MIN</div>
                     <h3 class="service-title">piedras calientes</h3>
-                    <p class="service-desc">el calor terapéutico de las piedras volcánicas disuelve las tensiones musculares y restaura el equilibrio vital de tu cuerpo</p>
+                    <p class="service-desc">El calor terapéutico de las piedras volcánicas disuelve las tensiones musculares y restaura el equilibrio vital de tu cuerpo.</p>
                     <div class="price-row">
                         <span class="price">$15.000</span>
                         <div class="line"></div>
@@ -409,7 +239,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN FAQ (Accordion Nativo HTML5) -->
+    <!-- Sección FAQ -->
     <section id="faq" class="section-faq">
         <div class="faq-container">
             <h2 class="title-faq">Preguntas Frecuentes</h2>
@@ -428,27 +258,28 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer id="contacto" class="footer">
         <div class="container text-center">
             <h2 class="footer-brand">GEKKO</h2>
             <div class="social-footer-group">
-                <a href="#" class="social-footer"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-footer"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-footer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-footer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
             <p class="footer-tagline">Recuperación Muscular con Intención</p>
             <p class="footer-copy">© 2026 GEKKO</p>
         </div>
     </footer>
 
-    <!-- MODAL NATIVO HTML5 -->
+    <!-- Modal Nativo HTML5 -->
     <dialog id="reservaModal" class="modal-dialog-native">
         <div class="modal-content-native">
             <button class="modal-close" onclick="document.getElementById('reservaModal').close()">&times;</button>
-            <h3 class="modal-title">Agenda tu sesión</h3>
-            <p>Vas a ser redirigido a Calendly para ver los días disponibles.</p>
+            <h3 class="modal-title">Agendá tu sesión</h3>
+            <p>Vas a ser redirigido a Calendly para ver los días y horarios disponibles.</p>
             <a href="https://calendly.com/lorenabustos999/" target="_blank" class="btn-tierra">Abrir Agenda Oficial</a>
         </div>
     </dialog>
+
 </body>
 </html>
