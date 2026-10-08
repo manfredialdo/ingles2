@@ -7,53 +7,54 @@ para mostrar en la prueba de ingles 2
 
 ```mermaid
 flowchart LR
-    HTML["html (lang=es)"] --> HEAD["head"]
-    HTML --> BODY["body"]
+    HTML["<b>HTML Document</b><br>(lang=es)"] --> HEAD["<b>HEAD</b>"]
+    HTML --> BODY["<b>BODY</b>"]
 
     %% Contenido de Head
-    subgraph HEAD_DETAILS ["Configuración & Metadatos"]
+    subgraph HEAD_DETAILS ["Metadatos & Assets"]
         direction TB
-        META["Metadatos SEO & OpenGraph<br><i>(OG, Keywords, Robots)</i>"]
-        FONTS["Fuentes & Iconos<br><i>(Montserrat, Playfair, FontAwesome)</i>"]
-        CSS["Hoja de Estilos<br><i>(static/css/style.css)</i>"]
+        META["Metadatos SEO & OG"]
+        FONTS["Google Fonts & FontAwesome"]
+        CSS["style.css (Estilos Unificados)"]
     end
     HEAD --> HEAD_DETAILS
 
-    %% Elementos de Body
+    %% Elementos Principales de Body
     BODY --> ASIDE["Barra Social Flotante<br><code>.social-float</code>"]
-    BODY --> NAV["Navbar con Checkbox Hack<br><code>.navbar</code>"]
-    BODY --> HERO["Hero Section<br><code>#inicio .hero-gekko</code>"]
+    BODY --> NAV["Navbar Responsive<br><code>.navbar</code>"]
+    BODY --> HERO["Hero Section<br><code>#inicio</code>"]
     BODY --> SERVICIOS["Sección Servicios<br><code>#servicios</code>"]
-    BODY --> FAQ["Sección FAQ<br><code>#faq .accordion-pure</code>"]
-    BODY --> FOOTER["Footer<br><code>#contacto .footer</code>"]
+    BODY --> FAQ["Acordeón FAQ<br><code>#faq</code>"]
+    BODY --> FOOTER["Footer & Redes<br><code>#contacto</code>"]
     BODY --> MODAL["Modal Nativo HTML5<br><code>#reservaModal</code>"]
 
-    %% Detalle de Servicios
-    subgraph ListaServicios ["Catálogo de Servicios & Precios"]
+    %% Subgraph de Servicios
+    subgraph ListaServicios ["Catálogo de Terapias"]
         direction TB
-        S1["4 Manos - $80.000<br><i>60 MIN</i>"]
-        S2["Cráneo Facial - $40.000<br><i>60 MIN</i>"]
-        S3["Descontracturante - $40.000<br><i>60 MIN</i>"]
-        S4["Drenaje Linfático - $40.000<br><i>60 MIN</i>"]
-        S5["Dúo - $80.000<br><i>60 MIN</i>"]
-        S6["Maderoterapia - $40.000<br><i>60 MIN</i>"]
-        S7["Combo 4x3 - $120.000<br><i>240 MIN</i>"]
-        S8["Piedras Calientes - $15.000<br><i>20 MIN</i>"]
+        S1["Masajes a 4 Manos<br><b>$80.000</b> | 60 MIN"]
+        S2["Cráneo Facial<br><b>$40.000</b> | 60 MIN"]
+        S3["Descontracturante<br><b>$40.000</b> | 60 MIN"]
+        S4["Drenaje Linfático<br><b>$40.000</b> | 60 MIN"]
+        S5["Dúo (2 Personas)<br><b>$80.000</b> | 60 MIN"]
+        S6["Maderoterapia<br><b>$40.000</b> | 60 MIN"]
+        S7["Combo 4x3<br><b>$120.000</b> | 240 MIN"]
+        S8["Piedras Calientes<br><b>$15.000</b> | 20 MIN"]
     end
     SERVICIOS --> ListaServicios
 
-    %% Interacciones
-    NAV -- "Click Reserva" --> MODAL
-    ListaServicios -- "Botón Reservar" --> MODAL
-    MODAL -- "Redirección" --> CALENDLY["Calendly (Agenda Oficial)"]
+    %% Interacciones de Reserva
+    NAV -- "Click 'RESERVAR'" --> MODAL
+    ListaServicios -- "Click 'Reservar Experiencia'" --> MODAL
+    MODAL -- "Redirige a" --> CALENDLY["<b>Calendly Agenda Oficial</b>"]
 
-    %% Estilos Mermaid personalizados con los colores de GEKKO
-    classDef root fill:#162622,stroke:#b49682,stroke-width:2px,color:#ffffff;
-    classDef main fill:#1e352f,stroke:#b49682,stroke-width:2px,color:#ffffff;
-    classDef card fill:#253e37,stroke:#b49682,stroke-width:1px,color:#ffffff;
-    classDef action fill:#b49682,stroke:#162622,stroke-width:2px,color:#ffffff;
+    %% Estilos de Alto Contraste
+    classDef default fill:#ffffff,stroke:#333333,stroke-width:2px,color:#111111;
+    classDef root fill:#e2e8f0,stroke:#0f172a,stroke-width:3px,color:#0f172a;
+    classDef mainNode fill:#f1f5f9,stroke:#1e293b,stroke-width:2px,color:#0f172a;
+    classDef serviceCard fill:#fff7ed,stroke:#ea580c,stroke-width:2px,color:#7c2d12;
+    classDef actionNode fill:#fde047,stroke:#ca8a04,stroke-width:3px,color:#713f12;
 
     class HTML,HEAD,BODY root;
-    class ASIDE,NAV,HERO,SERVICIOS,FAQ,FOOTER,MODAL main;
-    class S1,S2,S3,S4,S5,S6,S7,S8 card;
-    class CALENDLY action;
+    class ASIDE,NAV,HERO,SERVICIOS,FAQ,FOOTER,MODAL mainNode;
+    class S1,S2,S3,S4,S5,S6,S7,S8 serviceCard;
+    class CALENDLY actionNode;
