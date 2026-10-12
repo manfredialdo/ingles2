@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GEKKO BIENESTAR - ESTILOS CONSOLIDADOS
+   GEKKO BIENESTAR - ESTILOS CONSOLIDADOS (LIMPIOS)
    ========================================================================== */
 
 /* --- 1. VARIABLES GLOBALES & TEMATIZACIÓN --- */
@@ -40,16 +40,11 @@ img {
     display: block;
 }
 
-/* Container Utility */
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-.text-center {
-    text-align: center;
 }
 
 /* --- 3. BARRA SOCIAL FLOTANTE --- */
@@ -155,7 +150,6 @@ img {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* Checkbox Hack para Hamburguesa en Mobile */
 .nav-toggle {
     display: none;
 }
@@ -244,7 +238,7 @@ img {
     font-weight: 300;
 }
 
-/* --- 6. SECCIÓN SERVICIOS (TARJETAS EDITORIALES) --- */
+/* --- 6. SECCIÓN SERVICIOS --- */
 .section-servicios {
     padding: 80px 0;
     background-color: var(--color-lagarto);
@@ -407,7 +401,89 @@ img {
     margin: 40px 0;
 }
 
-/* --- 7. SECCIÓN FAQ (HTML5 DETAILS/SUMMARY) --- */
+/* --- 7. MODAL NATIVO HTML5 (<dialog>) --- */
+.modal-dialog-native {
+    margin: auto;
+    background: var(--color-oscuro);
+    border: 1px solid var(--color-detalle);
+    color: var(--color-texto);
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+.modal-dialog-native::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
+}
+
+/* --- 8. ANIMACIONES --- */
+@keyframes naturePulse {
+    0% { box-shadow: 0 0 0 0 rgba(180, 150, 130, 0.6); }
+    70% { box-shadow: 0 0 0 15px rgba(180, 150, 130, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(180, 150, 130, 0); }
+}
+
+/* --- 9. MEDIA QUERIES (RESPONSIVE) --- */
+@media (max-width: 991px) {
+    .service-card, 
+    .service-card.reverse {
+        flex-direction: column;
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .service-img-wrapper {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-toggle-label {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-oscuro);
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        border-bottom: 1px solid rgba(180, 150, 130, 0.2);
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu .nav-link, 
+    .nav-menu .btn-reservar {
+        display: block;
+        padding: 15px 0;
+        width: 100%;
+    }
+
+    .nav-toggle:checked ~ .nav-menu {
+        max-height: 350px;
+    }
+
+    .social-float {
+        bottom: 20px;
+        top: auto;
+        right: 20px;
+        transform: none;
+        flex-direction: row;
+    }
+}
+/* --- SECCIÓN FAQ --- */
 .section-faq {
     padding: 80px 0;
     background-color: var(--color-oscuro);
@@ -475,7 +551,7 @@ img {
     font-weight: 300;
 }
 
-/* --- 8. FOOTER --- */
+/* --- FOOTER --- */
 .footer {
     background-color: #0e1815;
     padding: 60px 0 30px;
@@ -518,133 +594,4 @@ img {
 .footer-copy {
     color: rgba(255, 255, 255, 0.3);
     font-size: 0.8rem;
-}
-
-/* --- 9. MODAL NATIVO HTML5 (<dialog>) --- */
-.modal-dialog-native {
-    margin: auto;
-    background: var(--color-oscuro);
-    border: 1px solid var(--color-detalle);
-    color: var(--color-texto);
-    padding: 40px;
-    max-width: 500px;
-    width: 90%;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-}
-
-.modal-dialog-native::backdrop {
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(5px);
-}
-
-.modal-content-native {
-    position: relative;
-    text-align: center;
-}
-
-.modal-close {
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    background: transparent;
-    border: none;
-    color: var(--color-detalle);
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-.modal-title {
-    font-family: var(--fuente-titulos);
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: var(--color-detalle);
-}
-
-.modal-dialog-native p {
-    color: var(--color-texto-muted);
-    margin-bottom: 25px;
-}
-
-.btn-tierra {
-    display: inline-block;
-    background-color: var(--color-detalle);
-    color: var(--color-texto);
-    text-decoration: none;
-    padding: 12px 30px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    transition: background 0.3s ease;
-}
-
-.btn-tierra:hover {
-    background-color: var(--color-detalle-hover);
-}
-
-/* --- 10. ANIMACIONES --- */
-@keyframes naturePulse {
-    0% { box-shadow: 0 0 0 0 rgba(180, 150, 130, 0.6); }
-    70% { box-shadow: 0 0 0 15px rgba(180, 150, 130, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(180, 150, 130, 0); }
-}
-
-/* --- 11. MEDIA QUERIES (RESPONSIVE) --- */
-@media (max-width: 991px) {
-    .service-card, 
-    .service-card.reverse {
-        flex-direction: column;
-        gap: 25px;
-        padding: 20px;
-    }
-
-    .service-img-wrapper {
-        width: 100%;
-        height: 250px;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-toggle-label {
-        display: block;
-    }
-
-    .nav-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--color-oscuro);
-        flex-direction: column;
-        gap: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease-in-out;
-        border-bottom: 1px solid rgba(180, 150, 130, 0.2);
-    }
-
-    .nav-menu li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-menu .nav-link, 
-    .nav-menu .btn-reservar {
-        display: block;
-        padding: 15px 0;
-        width: 100%;
-    }
-
-    /* Mostrar menú cuando el checkbox está tildado */
-    .nav-toggle:checked ~ .nav-menu {
-        max-height: 350px;
-    }
-
-    .social-float {
-        bottom: 20px;
-        top: auto;
-        right: 20px;
-        transform: none;
-        flex-direction: row;
-    }
 }
