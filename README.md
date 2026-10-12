@@ -1,16 +1,18 @@
-
 # ingles2
 para mostrar en la prueba de ingles 2
 
 ## URL     https://catalogo.gekkomassage.workers.dev/
 
+---
 
+## 🎨 Vista Previa Visual de los Diagramas
+
+### 1. Estructura y Flujo General del Sitio
 ```mermaid
 flowchart LR
     HTML["<b>HTML Document</b><br>(lang=es)"] --> HEAD["<b>HEAD</b>"]
     HTML --> BODY["<b>BODY</b>"]
 
-    %% Contenido de Head
     subgraph HEAD_DETAILS ["Metadatos & Assets"]
         direction TB
         META["Metadatos SEO & OG"]
@@ -19,7 +21,6 @@ flowchart LR
     end
     HEAD --> HEAD_DETAILS
 
-    %% Elementos Principales de Body
     BODY --> ASIDE["Barra Social Flotante<br><code>.social-float</code>"]
     BODY --> NAV["Navbar Responsive<br><code>.navbar</code>"]
     BODY --> HERO["Hero Section<br><code>#inicio</code>"]
@@ -28,7 +29,6 @@ flowchart LR
     BODY --> FOOTER["Footer & Redes<br><code>#contacto</code>"]
     BODY --> MODAL["Modal Nativo HTML5<br><code>#reservaModal</code>"]
 
-    %% Subgraph de Servicios
     subgraph ListaServicios ["Catálogo de Terapias"]
         direction TB
         S1["Masajes a 4 Manos<br><b>$80.000</b> | 60 MIN"]
@@ -42,12 +42,10 @@ flowchart LR
     end
     SERVICIOS --> ListaServicios
 
-    %% Interacciones de Reserva
     NAV -- "Click 'RESERVAR'" --> MODAL
     ListaServicios -- "Click 'Reservar Experiencia'" --> MODAL
     MODAL -- "Redirige a" --> CALENDLY["<b>Calendly Agenda Oficial</b>"]
 
-    %% Estilos de Alto Contraste
     classDef default fill:#ffffff,stroke:#333333,stroke-width:2px,color:#111111;
     classDef root fill:#e2e8f0,stroke:#0f172a,stroke-width:3px,color:#0f172a;
     classDef mainNode fill:#f1f5f9,stroke:#1e293b,stroke-width:2px,color:#0f172a;
@@ -59,10 +57,7 @@ flowchart LR
     class S1,S2,S3,S4,S5,S6,S7,S8 serviceCard;
     class CALENDLY actionNode;
 
-
-
 graph TD
-    %% Estructura Principal del CSS de Gekko
     CSS["GEKKO BIENESTAR - CSS CONSOLIDADO"] --> Root["1. :root (Variables Globales)<br>Define colores, fuentes y tonos base"]
     CSS --> Reset["2. Reset y Bases<br>Limpia márgenes, padding y suaviza el scroll"]
     CSS --> Social["3. Barra Social Flotante<br>Botones fijos de redes a la derecha"]
@@ -75,7 +70,6 @@ graph TD
     CSS --> FAQ["10. Sección FAQ<br>Acordeón desplegable de preguntas frecuentes"]
     CSS --> Footer["11. Footer<br>Pie de página con enlaces sociales y copyright"]
 
-    %% Estilos de las cajas
     style CSS fill:#1e352f,stroke:#b49682,stroke-width:2px,color:#fff
     style Root fill:#162622,stroke:#b49682,color:#fff
     style Reset fill:#162622,stroke:#b49682,color:#fff
@@ -87,4 +81,4 @@ graph TD
     style Animaciones fill:#162622,stroke:#b49682,color:#fff
     style Responsive fill:#162622,stroke:#b49682,color:#fff
     style FAQ fill:#162622,stroke:#b49682,color:#fff
-    style Footer fill:#162622,stroke:#b49682,color:#fff
+    style Footer fill:#162622,stroke:#b49682,color:#fff    
