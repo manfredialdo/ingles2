@@ -58,3 +58,33 @@ flowchart LR
     class ASIDE,NAV,HERO,SERVICIOS,FAQ,FOOTER,MODAL mainNode;
     class S1,S2,S3,S4,S5,S6,S7,S8 serviceCard;
     class CALENDLY actionNode;
+
+
+
+graph TD
+    %% Estructura Principal del CSS de Gekko
+    CSS["GEKKO BIENESTAR - CSS CONSOLIDADO"] --> Root["1. :root (Variables Globales)<br>Define colores, fuentes y tonos base"]
+    CSS --> Reset["2. Reset y Bases<br>Limpia márgenes, padding y suaviza el scroll"]
+    CSS --> Social["3. Barra Social Flotante<br>Botones fijos de redes a la derecha"]
+    CSS --> Navbar["4. Navbar & Menú Responsive<br>Barra superior fija, logo y menú hamburguesa sin JS"]
+    CSS --> Hero["5. Sección Hero<br>Imagen de portada principal con degradado y título"]
+    CSS --> Servicios["6. Sección Servicios<br>Tarjetas editoriales con efectos hover y precios"]
+    CSS --> Modal["7. Modal Nativo &lt;dialog&gt;<br>Ventana flotante de reservas con fondo difuminado"]
+    CSS --> Animaciones["8. Animaciones<br>Efectos de pulso (naturePulse) para botones"]
+    CSS --> Responsive["9. Media Queries (Responsive)<br>Adapta las tarjetas, menús y redes para celulares y tablets"]
+    CSS --> FAQ["10. Sección FAQ<br>Acordeón desplegable de preguntas frecuentes"]
+    CSS --> Footer["11. Footer<br>Pie de página con enlaces sociales y copyright"]
+
+    %% Estilos de las cajas
+    style CSS fill:#1e352f,stroke:#b49682,stroke-width:2px,color:#fff
+    style Root fill:#162622,stroke:#b49682,color:#fff
+    style Reset fill:#162622,stroke:#b49682,color:#fff
+    style Social fill:#162622,stroke:#b49682,color:#fff
+    style Navbar fill:#162622,stroke:#b49682,color:#fff
+    style Hero fill:#162622,stroke:#b49682,color:#fff
+    style Servicios fill:#162622,stroke:#b49682,color:#fff
+    style Modal fill:#162622,stroke:#b49682,color:#fff
+    style Animaciones fill:#162622,stroke:#b49682,color:#fff
+    style Responsive fill:#162622,stroke:#b49682,color:#fff
+    style FAQ fill:#162622,stroke:#b49682,color:#fff
+    style Footer fill:#162622,stroke:#b49682,color:#fff
