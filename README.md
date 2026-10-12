@@ -4,14 +4,15 @@ para mostrar en la prueba de ingles 2
 ## URL     https://catalogo.gekkomassage.workers.dev/
 
 ---
+
 ## 🎨 Vista Previa Visual del Proyecto
 
 ```mermaid
 flowchart TB
 
-    subgraph MAPA_SITIO ["1. Estructura y Flujo General del Sitio"]
-        direction LR
-        HTML["<b>HTML Document</b><br>(lang=es)"] --> HEAD["<b>HEAD</b>"]
+    subgraph MAPA_SITIO ["1. ESTRUCTURA Y FLUJO GENERAL DEL SITIO"]
+        direction TB
+        HTML["<b>HTML Document</b> (lang=es)"] --> HEAD["<b>HEAD</b>"]
         HTML --> BODY["<b>BODY</b>"]
 
         subgraph HEAD_DETAILS ["Metadatos & Assets"]
@@ -22,35 +23,38 @@ flowchart TB
         end
         HEAD --> HEAD_DETAILS
 
-        BODY --> ASIDE["Barra Social Flotante<br><code>.social-float</code>"]
-        BODY --> NAV["Navbar Responsive<br><code>.navbar</code>"]
-        BODY --> HERO["Hero Section<br><code>#inicio</code>"]
-        BODY --> SERVICIOS["Sección Servicios<br><code>#servicios</code>"]
-        BODY --> FAQ["Acordeón FAQ<br><code>#faq</code>"]
-        BODY --> FOOTER["Footer & Redes<br><code>#contacto</code>"]
-        BODY --> MODAL["Modal Nativo HTML5<br><code>#reservaModal</code>"]
+        BODY --> ASIDE["Barra Social Flotante (.social-float)"]
+        BODY --> NAV["Navbar Responsive (.navbar)"]
+        BODY --> HERO["Hero Section (#inicio)"]
+        BODY --> SERVICIOS["Sección Servicios (#servicios)"]
+        BODY --> FAQ["Acordeón FAQ (#faq)"]
+        BODY --> FOOTER["Footer & Redes (#contacto)"]
+        BODY --> MODAL["Modal Nativo HTML5 (#reservaModal)"]
 
         subgraph ListaServicios ["Catálogo de Terapias"]
             direction TB
-            S1["Masajes a 4 Manos<br><b>$80.000</b> | 60 MIN"]
-            S2["Cráneo Facial<br><b>$40.000</b> | 60 MIN"]
-            S3["Descontracturante<br><b>$40.000</b> | 60 MIN"]
-            S4["Drenaje Linfático<br><b>$40.000</b> | 60 MIN"]
-            S5["Dúo (2 Personas)<br><b>$80.000</b> | 60 MIN"]
-            S6["Maderoterapia<br><b>$40.000</b> | 60 MIN"]
-            S7["Combo 4x3<br><b>$120.000</b> | 240 MIN"]
-            S8["Piedras Calientes<br><b>$15.000</b> | 20 MIN"]
+            S1["Masajes a 4 Manos - $80.000 | 60 MIN"]
+            S2["Cráneo Facial - $40.000 | 60 MIN"]
+            S3["Descontracturante - $40.000 | 60 MIN"]
+            S4["Drenaje Linfático - $40.000 | 60 MIN"]
+            S5["Dúo (2 Personas) - $80.000 | 60 MIN"]
+            S6["Maderoterapia - $40.000 | 60 MIN"]
+            S7["Combo 4x3 - $120.000 | 240 MIN"]
+            S8["Piedras Calientes - $15.000 | 20 MIN"]
         end
         SERVICIOS --> ListaServicios
 
-        NAV -- "Click 'RESERVAR'" --> MODAL
-        ListaServicios -- "Click 'Reservar Experiencia'" --> MODAL
+        NAV -- "Click RESERVAR" --> MODAL
+        ListaServicios -- "Click Reservar Experiencia" --> MODAL
         MODAL -- "Redirige a" --> CALENDLY["<b>Calendly Agenda Oficial</b>"]
     end
 
-    subgraph MAPA_CSS ["2. Mapa Conceptual del CSS Consolidado"]
-        direction TD
-        CSS["GEKKO BIENESTAR - CSS CONSOLIDADO"] --> Root["1. :root (Variables Globales)<br>Define colores, fuentes y tonos base"]
+    MAPA_SITIO --> MAPA_CSS
+
+    subgraph MAPA_CSS ["2. MAPA CONCEPTUAL DEL CSS CONSOLIDADO"]
+        direction TB
+        CSS["GEKKO BIENESTAR - CSS CONSOLIDADO"]
+        CSS --> Root["1. :root (Variables Globales)<br>Define colores, fuentes y tonos base"]
         CSS --> Reset["2. Reset y Bases<br>Limpia márgenes, padding y suaviza el scroll"]
         CSS --> Social["3. Barra Social Flotante<br>Botones fijos de redes a la derecha"]
         CSS --> Navbar["4. Navbar & Menú Responsive<br>Barra superior fija, logo y menú hamburguesa sin JS"]
