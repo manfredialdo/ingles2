@@ -3,6 +3,8 @@ para mostrar en la prueba de ingles 2
 
 ## URL     https://catalogo.gekkomassage.workers.dev/
 
+## url   https://ingles2.aldodev-tupad.workers.dev/
+
 ---
 
 ## 🎨 Vista Previa Visual del Proyecto (Gekko Bienestar)
