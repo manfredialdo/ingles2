@@ -1,0 +1,90 @@
+[
+    {
+        "id": 1,
+        "image": "static/uploads/bfcb655f65de4255b6ecf217acb106e7.jpg",
+        "alt": "masajes a cuatro manos",
+        "badge": "masaje",
+        "duration": "60 MIN",
+        "title": "masajes a cuatro manos",
+        "description": "Los terapeutas utilizan movimientos coordinados (a menudo en espejo) que envuelven el cuerpo, facilitando la desconexión mental al no poder predecir el siguiente movimiento.",
+        "price": "$80.000",
+        "reverse": false
+    },
+    {
+        "id": 2,
+        "image": "static/uploads/86bb886ec0da43de84941a3b671292aa.jpg",
+        "alt": "masaje craneo facial",
+        "badge": "masaje",
+        "duration": "60 MIN",
+        "title": "masaje craneo facial",
+        "description": "Reduce el estrés, insomnio y la rigidez en la zona cervical y maxilar.",
+        "price": "$40.000",
+        "reverse": true
+    },
+    {
+        "id": 3,
+        "image": "static/uploads/cc79ba91ab654110be4512ecc9c40466.jpg",
+        "alt": "descontracturante",
+        "badge": "masaje",
+        "duration": "60 MIN",
+        "title": "descontracturante",
+        "description": "Objetivo: Aliviar dolores crónicos o agudos en zonas específicas (espalda, cuello, hombros).",
+        "price": "$40.000",
+        "reverse": false
+    },
+    {
+        "id": 4,
+        "image": "static/uploads/f0d0d688b1754532b69d2a55a3ce6a4d.jpg",
+        "alt": "drenaje linfatico",
+        "badge": "masaje",
+        "duration": "60 MIN",
+        "title": "drenaje linfatico",
+        "description": "Reduce la hinchazón y retención de líquidos. Mejora el sistema inmunológico y depura el organismo. Ayuda en la recuperación de cirugías.",
+        "price": "$40.000",
+        "reverse": true
+    },
+    {
+        "id": 5,
+        "image": "static/uploads/5a563a379962402e838bda825c613701.jpg",
+        "alt": "duo",
+        "badge": "masaje",
+        "duration": "60 MIN",
+        "title": "duo",
+        "description": "Relajación simultánea para dos personas en la misma sala, realizada por dos terapeutas.",
+        "price": "$80.000",
+        "reverse": false
+    },
+    {
+        "id": 6,
+        "image": "static/uploads/acc7e64c916b432fb82a6c89362bbcac.jpg",
+        "alt": "maderoterapia",
+        "badge": "masaje",
+        "duration": "60 MIN",
+        "title": "maderoterapia",
+        "description": "Moldea la figura, reduce grasa/celulitis, reafirma la piel y mejora la circulación.",
+        "price": "$40.000",
+        "reverse": true
+    },
+    {
+        "id": 7,
+        "image": "static/uploads/e089fc66b3eb4831a7342006d99f90af.jpg",
+        "alt": "4x3",
+        "badge": "masaje",
+        "duration": "240 MIN",
+        "title": "combo 4x3",
+        "description": "Pack de 4 masajes al precio de 3.",
+        "price": "$120.000",
+        "reverse": false
+    },
+    {
+        "id": 8,
+        "image": "static/uploads/a4a66aeeed17473cb1b66e33c3f57e1f.png",
+        "alt": "piedras calientes",
+        "badge": "masaje",
+        "duration": "20 MIN",
+        "title": "piedras calientes",
+        "description": "El calor terapéutico de las piedras volcánicas disuelve las tensiones musculares y restaura el equilibrio vital de tu cuerpo.",
+        "price": "$15.000",
+        "reverse": true
+    }
+]

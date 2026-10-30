@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    /* Mapeo de archivos de entrada y salida */
+    "rootDir": "./",
+    "outDir": "./static/js",
+
+    /* Entorno para Navegador Web */
+    "target": "es2022",
+    "module": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+
+    /* Opciones recomendadas y Tipado Estricto */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "moduleResolution": "bundler"
+  },
+  "include": ["main.ts"]
+}

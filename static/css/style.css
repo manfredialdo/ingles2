@@ -402,8 +402,10 @@ img {
 }
 
 /* --- 7. MODAL NATIVO HTML5 (<dialog>) --- */
+/* --- 7. MODAL PERSONALIZADO --- */
 .modal-dialog-native {
-    margin: auto;
+    display: none; /* Oculto por defecto hasta que se abra */
+    flex-direction: column;
     background: var(--color-oscuro);
     border: 1px solid var(--color-detalle);
     color: var(--color-texto);
@@ -411,6 +413,13 @@ img {
     max-width: 500px;
     width: 90%;
     box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    
+    /* Centrado absoluto exacto en el medio de la pantalla */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3000;
 }
 
 .modal-dialog-native::backdrop {
@@ -552,10 +561,19 @@ img {
 }
 
 /* --- FOOTER --- */
+/* --- FOOTER --- */
 .footer {
     background-color: #0e1815;
-    padding: 60px 0 30px;
+    padding: 60px 40px 30px;
     border-top: 1px solid rgba(180, 150, 130, 0.1);
+}
+
+/* Forzamos al contenedor interno a ir a la derecha y quitamos el centrado */
+.footer .container {
+    text-align: right !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    max-width: none !important;
 }
 
 .footer-brand {
@@ -568,7 +586,7 @@ img {
 
 .social-footer-group {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Alinea los íconos a la derecha */
     gap: 25px;
     margin-bottom: 20px;
 }

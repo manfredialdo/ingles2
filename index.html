@@ -28,8 +28,7 @@
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-
-    <!-- Barra Social Flotante -->
+<!-- Barra Social Flotante -->
     <aside class="social-float">
         <a href="https://github.com/manfredialdo" target="_blank" rel="noopener noreferrer" class="social-whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         <a href="https://github.com/manfredialdo" target="_blank" rel="noopener noreferrer" class="social-instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -51,7 +50,7 @@
                 <li><a class="nav-link" href="#servicios">Servicios</a></li>
                 <li><a class="nav-link" href="#faq">Preguntas</a></li>
                 <li>
-                    <button class="btn-reservar" onclick="document.getElementById('reservaModal').showModal()">RESERVAR</button>
+                    <button id="btn-reservar-nav" class="btn-reservar">RESERVAR</button>
                 </li>
             </ul>
         </div>
@@ -77,164 +76,14 @@
                 <h2 class="title-section">TERAPIAS SELECTAS</h2>
                 <div class="divider"></div>
             </div>
-                        
-            <!-- Servicio 1 -->
-            <article class="service-card">
-                <div class="service-img-wrapper">
-                    <img src="static/uploads/bfcb655f65de4255b6ecf217acb106e7.jpg" alt="masajes a cuatro manos" class="service-img">
-                    <span class="badge-tag">masaje</span>
-                </div>
-                <div class="service-info">
-                    <div class="duration"><i class="far fa-clock"></i> 60 MIN</div>
-                    <h3 class="service-title">masajes a cuatro manos</h3>
-                    <p class="service-desc">Los terapeutas utilizan movimientos coordinados (a menudo en espejo) que envuelven el cuerpo, facilitando la desconexión mental al no poder predecir el siguiente movimiento.</p>
-                    <div class="price-row">
-                        <span class="price">$80.000</span>
-                        <div class="line"></div>
-                    </div>
-                    <button class="btn-outline-detalle" onclick="document.getElementById('reservaModal').showModal()">Reservar Experiencia</button>
-                </div>
-            </article>
+            
+            <!-- Indicador de Carga -->
+            <div id="loading" style="display: none; text-align: center; padding: 20px; font-weight: 600; color: #666;">
+                Cargando servicios...
+            </div>
 
-            <div class="divider-line"></div>
-
-            <!-- Servicio 2 -->
-            <article class="service-card reverse">
-                <div class="service-img-wrapper">
-                    <img src="static/uploads/86bb886ec0da43de84941a3b671292aa.jpg" alt="masaje craneo facial" class="service-img">
-                    <span class="badge-tag">masaje</span>
-                </div>
-                <div class="service-info">
-                    <div class="duration"><i class="far fa-clock"></i> 60 MIN</div>
-                    <h3 class="service-title">masaje craneo facial</h3>
-                    <p class="service-desc">Reduce el estrés, insomnio y la rigidez en la zona cervical y maxilar.</p>
-                    <div class="price-row">
-                        <span class="price">$40.000</span>
-                        <div class="line"></div>
-                    </div>
-                    <button class="btn-outline-detalle" onclick="document.getElementById('reservaModal').showModal()">Reservar Experiencia</button>
-                </div>
-            </article>
-
-            <div class="divider-line"></div>
-
-            <!-- Servicio 3 -->
-            <article class="service-card">
-                <div class="service-img-wrapper">
-                    <img src="static/uploads/cc79ba91ab654110be4512ecc9c40466.jpg" alt="descontracturante" class="service-img">
-                    <span class="badge-tag">masaje</span>
-                </div>
-                <div class="service-info">
-                    <div class="duration"><i class="far fa-clock"></i> 60 MIN</div>
-                    <h3 class="service-title">descontracturante</h3>
-                    <p class="service-desc">Objetivo: Aliviar dolores crónicos o agudos en zonas específicas (espalda, cuello, hombros).</p>
-                    <div class="price-row">
-                        <span class="price">$40.000</span>
-                        <div class="line"></div>
-                    </div>
-                    <button class="btn-outline-detalle" onclick="document.getElementById('reservaModal').showModal()">Reservar Experiencia</button>
-                </div>
-            </article>
-
-            <div class="divider-line"></div>
-
-            <!-- Servicio 4 -->
-            <article class="service-card reverse">
-                <div class="service-img-wrapper">
-                    <img src="static/uploads/f0d0d688b1754532b69d2a55a3ce6a4d.jpg" alt="drenaje linfatico" class="service-img">
-                    <span class="badge-tag">masaje</span>
-                </div>
-                <div class="service-info">
-                    <div class="duration"><i class="far fa-clock"></i> 60 MIN</div>
-                    <h3 class="service-title">drenaje linfatico</h3>
-                    <p class="service-desc">Reduce la hinchazón y retención de líquidos. Mejora el sistema inmunológico y depura el organismo. Ayuda en la recuperación de cirugías.</p>
-                    <div class="price-row">
-                        <span class="price">$40.000</span>
-                        <div class="line"></div>
-                    </div>
-                    <button class="btn-outline-detalle" onclick="document.getElementById('reservaModal').showModal()">Reservar Experiencia</button>
-                </div>
-            </article>
-
-            <div class="divider-line"></div>
-
-            <!-- Servicio 5 -->
-            <article class="service-card">
-                <div class="service-img-wrapper">
-                    <img src="static/uploads/5a563a379962402e838bda825c613701.jpg" alt="duo" class="service-img">
-                    <span class="badge-tag">masaje</span>
-                </div>
-                <div class="service-info">
-                    <div class="duration"><i class="far fa-clock"></i> 60 MIN</div>
-                    <h3 class="service-title">duo</h3>
-                    <p class="service-desc">Relajación simultánea para dos personas en la misma sala, realizada por dos terapeutas.</p>
-                    <div class="price-row">
-                        <span class="price">$80.000</span>
-                        <div class="line"></div>
-                    </div>
-                    <button class="btn-outline-detalle" onclick="document.getElementById('reservaModal').showModal()">Reservar Experiencia</button>
-                </div>
-            </article>
-
-            <div class="divider-line"></div>
-
-            <!-- Servicio 6 -->
-            <article class="service-card reverse">
-                <div class="service-img-wrapper">
-                    <img src="static/uploads/acc7e64c916b432fb82a6c89362bbcac.jpg" alt="maderoterapia" class="service-img">
-                    <span class="badge-tag">masaje</span>
-                </div>
-                <div class="service-info">
-                    <div class="duration"><i class="far fa-clock"></i> 60 MIN</div>
-                    <h3 class="service-title">maderoterapia</h3>
-                    <p class="service-desc">Moldea la figura, reduce grasa/celulitis, reafirma la piel y mejora la circulación.</p>
-                    <div class="price-row">
-                        <span class="price">$40.000</span>
-                        <div class="line"></div>
-                    </div>
-                    <button class="btn-outline-detalle" onclick="document.getElementById('reservaModal').showModal()">Reservar Experiencia</button>
-                </div>
-            </article>
-
-            <div class="divider-line"></div>
-
-            <!-- Servicio 7 -->
-            <article class="service-card">
-                <div class="service-img-wrapper">
-                    <img src="static/uploads/e089fc66b3eb4831a7342006d99f90af.jpg" alt="4x3" class="service-img">
-                    <span class="badge-tag">masaje</span>
-                </div>
-                <div class="service-info">
-                    <div class="duration"><i class="far fa-clock"></i> 240 MIN</div>
-                    <h3 class="service-title">combo 4x3</h3>
-                    <p class="service-desc">Pack de 4 masajes al precio de 3.</p>
-                    <div class="price-row">
-                        <span class="price">$120.000</span>
-                        <div class="line"></div>
-                    </div>
-                    <button class="btn-outline-detalle" onclick="document.getElementById('reservaModal').showModal()">Reservar Experiencia</button>
-                </div>
-            </article>
-
-            <div class="divider-line"></div>
-
-            <!-- Servicio 8 -->
-            <article class="service-card reverse">
-                <div class="service-img-wrapper">
-                    <img src="static/uploads/a4a66aeeed17473cb1b66e33c3f57e1f.png" alt="piedras calientes" class="service-img">
-                    <span class="badge-tag">masaje</span>
-                </div>
-                <div class="service-info">
-                    <div class="duration"><i class="far fa-clock"></i> 20 MIN</div>
-                    <h3 class="service-title">piedras calientes</h3>
-                    <p class="service-desc">El calor terapéutico de las piedras volcánicas disuelve las tensiones musculares y restaura el equilibrio vital de tu cuerpo.</p>
-                    <div class="price-row">
-                        <span class="price">$15.000</span>
-                        <div class="line"></div>
-                    </div>
-                    <button class="btn-outline-detalle" onclick="document.getElementById('reservaModal').showModal()">Reservar Experiencia</button>
-                </div>
-            </article>
+            <!-- Contenedor dinámico donde se inyectarán las tarjetas -->
+            <div id="services-container"></div>
 
         </div>
     </section>
@@ -248,11 +97,11 @@
             <div class="accordion-pure">
                 <details>
                     <summary>¿Cómo reservo mi turno?</summary>
-                    <p>Puedes hacerlo directamente desde el botón superior de "Reservar", que te llevará a nuestra agenda en Calendly.</p>
+                    <p>Puedes hacerlo directamente desde el botón superior de "Reservar", que te llevará a nuestra agenda ..</p>
                 </details>
                 <details>
                     <summary>¿Dónde están ubicados?</summary>
-                    <p>Nos encontramos en El Calafate, Santa Cruz. Atendemos con cita previa.</p>
+                    <p>Nos encontramos cerca tuyo. Atendemos con cita previa.</p>
                 </details>
             </div>
         </div>
@@ -274,12 +123,16 @@
     <!-- Modal Nativo HTML5 -->
     <dialog id="reservaModal" class="modal-dialog-native">
         <div class="modal-content-native">
-            <button class="modal-close" onclick="document.getElementById('reservaModal').close()">&times;</button>
+            <button id="modal-close-btn" class="modal-close">&times;</button>
             <h3 class="modal-title">Agendá tu sesión</h3>
             <p>Vas a ser redirigido a Calendly para ver los días y horarios disponibles.</p>
-            <a href="https://github.com/manfredialdo" target="_blank" class="btn-tierra">Abrir Agenda Oficial</a>
+            <a href="https://github.com/manfredialdo" target="_blank" rel="noopener noreferrer" class="btn-tierra">Abrir Agenda Oficial</a>
         </div>
     </dialog>
+    <script type="module" src="/main.ts"></script>
+
+    <!-- Script Compilado 
+    <script src="static/js/main.js"></script>    -->
 
 </body>
 </html>
