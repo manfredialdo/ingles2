@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ingles2
 para mostrar en la prueba de ingles 2
 
@@ -9,44 +10,43 @@ para mostrar en la prueba de ingles 2
 
 ## 🎨 Vista Previa Visual del Proyecto (Gekko Bienestar)
 
+=======
+>>>>>>> feature/ideatypescript
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '18px', 'fontFamily': 'sans-serif'}}}%%
-flowchart TB
-
-    subgraph ESTRUCTURA ["1. ESTRUCTURA Y NAVEGACIÓN DEL SITIO"]
-        direction TB
+flowchart TD
+    subgraph DEPLOYMENT["🌐 Deployment & Live Links"]
+        GH["GitHub Repository<br/><b>github.com/manfredialdo/ingles2</b>"]
+        CF["Cloudflare Workers Live App<br/><b>ingles2.aldodev-tupad.workers.dev</b>"]
+        UI_LINKS["Interface Elements<br/><i>(Reservation Buttons & Social Links)</i>"]
         
-        HEAD["<b>HTML HEAD</b><br>SEO • Fonts • CSS"]
-        
-        subgraph SECCIONES ["Secciones Principales de la Página"]
-            direction TB
-            ASIDE["<b>1. BARRA SOCIAL</b><br>Redes flotantes"]
-            NAV["<b>2. NAVBAR</b><br>Menú principal"]
-            HERO["<b>3. INICIO (HERO)</b><br>Portada principal"]
-            SERVICIOS["<b>4. SERVICIOS</b><br>Catálogo de terapias"]
-            FAQ["<b>5. PREGUNTAS (FAQ)</b><br>Acordeón de dudas"]
-            FOOTER["<b>6. FOOTER</b><br>Pie de página"]
-        end
-
-        MODAL["<b>MODAL DE RESERVAS</b><br>Ventana flotante HTML5"]
-        CALENDLY["<b>CALENDLY OFICIAL</b><br>Agenda de citas"]
-
-        HEAD --> SECCIONES
-        NAV -- "Click 'RESERVAR'" --> MODAL
-        SERVICIOS -- "Click 'Reservar Experiencia'" --> MODAL
-        MODAL -- "Redirige" --> CALENDLY
+        GH <--> UI_LINKS
+        GH -->|Deployed to| CF
     end
 
-    subgraph CATALAGOS ["2. CATÁLOGO DE 8 TERAPIAS"]
-        direction TB
-        S1["<b>Masajes a 4 Manos</b> | 60 min | $80.000"]
-        S2["<b>Cráneo Facial</b> | 60 min | $40.000"]
-        S3["<b>Descontracturante</b> | 60 min | $40.000"]
-        S4["<b>Drenaje Linfático</b> | 60 min | $40.000"]
-        S5["<b>Dúo (2 Personas)</b> | 60 min | $80.000"]
-        S6["<b>Maderoterapia</b> | 60 min | $40.000"]
-        S7["<b>Combo 4x3</b> | 240 min | $120.000"]
-        S8["<b>Piedras Calientes</b> | 20 min | $15.000"]
+    subgraph ARCHITECTURE["🏗️ Architecture & Stack"]
+        HTML["<b>HTML5</b><br/>Semantic Layout,<br/>Header, Nav & Dialog Modal"]
+        CSS["<b>CSS3 Styling</b><br/>Minimalist Dark Green Palette,<br/>Flex/Grid Layout & Hover Effects"]
+        JSON["<b>services.json</b><br/>Data Store<br/><i>(Title, Duration, Price, Image, Badge)</i>"]
+        TS["<b>TypeScript Core</b><br/>Strict Typing, Async Fetch,<br/>Dynamic DOM & XSS Prevention"]
+        
+        HTML --- CSS
+        HTML --- TS
+        JSON -.->|Fetches Data| TS
+    end
+
+    subgraph WORKFLOW["⚡ TypeScript Execution & Rendering Lifecycle"]
+        E1["<b>1. Document Event</b><br/><code>DOMContentLoaded</code> listener triggers <code>cargarServicios()</code>"]
+        E2["<b>2. Asynchronous Fetch</b><br/><code>obtenerServicios()</code> requests <code>services.json</code>"]
+        E3["<b>3. Type Safety & Validation</b><br/>Check <code>response.ok</code> & verify array structure<br/><i>(Runtime & Compile-time safety)</i>"]
+        E4["<b>4. Array Iteration & Processing</b><br/>Loop through array items with index track"]
+        E5["<b>5. Dynamic Node Creation</b><br/><code>crearTarjetaServicio()</code> builds elements with <code>document.createElement()</code><br/><i>(Prevents XSS Injection)</i>"]
+        E6["<b>6. Event Binding & DOM Injection</b><br/>Attach modal handlers & append cards + dividers to <code>#services-container</code>"]
+
+        E1 --> E2
+        E2 --> E3
+        E3 -->|Valid Data| E4
+        E4 --> E5
+        E5 --> E6
     end
 
     subgraph ESTILOS_CSS ["3. MAPA DE ESTILOS CSS (style.css)"]
