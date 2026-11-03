@@ -75,6 +75,7 @@ function crearTarjetaServicio(service: Service, modal: HTMLDialogElement | null)
     title.className = "service-title";
     title.textContent = service.title;
 
+    // sin descripcion
     const desc = document.createElement("p");
     desc.className = "service-desc";
     desc.textContent = service.description;
@@ -101,7 +102,7 @@ function crearTarjetaServicio(service: Service, modal: HTMLDialogElement | null)
 
     serviceInfo.appendChild(duration);
     serviceInfo.appendChild(title);
-    serviceInfo.appendChild(desc);
+    serviceInfo.appendChild(desc);   // comentar para sacar descripcion
     serviceInfo.appendChild(priceRow);
     serviceInfo.appendChild(btn);
 
