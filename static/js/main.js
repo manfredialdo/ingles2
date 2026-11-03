@@ -49,9 +49,9 @@ function crearTarjetaServicio(service, modal) {
     title.className = "service-title";
     title.textContent = service.title;
     // sin descripcion
-    // const desc = document.createElement("p");
-    // desc.className = "service-desc";
-    // desc.textContent = service.description;
+    const desc = document.createElement("p");
+    desc.className = "service-desc";
+    desc.textContent = service.description;
     const priceRow = document.createElement("div");
     priceRow.className = "price-row";
     const price = document.createElement("span");
@@ -69,7 +69,7 @@ function crearTarjetaServicio(service, modal) {
     });
     serviceInfo.appendChild(duration);
     serviceInfo.appendChild(title);
-    // serviceInfo.appendChild(desc);   // comentar para sacar descripcion
+    serviceInfo.appendChild(desc); // comentar para sacar descripcion
     serviceInfo.appendChild(priceRow);
     serviceInfo.appendChild(btn);
     article.appendChild(imgWrapper);
