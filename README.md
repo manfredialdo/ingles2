@@ -1,7 +1,7 @@
 ## https://ingles2.aldodev-tupad.workers.dev
 
 ```mermaid
-flowchart TD
+flowchart LR
     classDef default fill:#1e293b,stroke:#94a3b8,stroke-width:2px,color:#ffffff,font-size:15px;
     classDef grandeHead fill:#0f172a,stroke:#38bdf8,stroke-width:3px,color:#ffffff,font-size:16px;
     classDef grandeBoton fill:#854d0e,stroke:#facc15,stroke-width:3px,color:#fef08a,font-size:15px;
@@ -57,7 +57,7 @@ flowchart TD
         CSS11["<b>11. Footer</b><br/>Pie de página"]
     end
 
-    %% --- CONEXIONES GENERALES DEL FLUJO --- %%
+    %% --- CONEXIONES GENERALES DEL FLUJO HORIZONTAL --- %%
     DEPLOYMENT ==> ARCHITECTURE
     ARCHITECTURE ==> WORKFLOW
     WORKFLOW ==> ESTILOS_CSS
