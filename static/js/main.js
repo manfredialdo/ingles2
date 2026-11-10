@@ -6,7 +6,7 @@
  * Obtiene los servicios de forma asíncrona validando la respuesta del JSON.
  */
 async function obtenerServicios() {
-    // Si lo subís a GitHub, podés cambiar "services.json" por tu URL Raw de GitHub
+    // en un futuro cambiar "services.json" por una URL Raw de GitHub
     const response = await fetch("services.json");
     if (!response.ok) {
         throw new Error(`Error en la petición HTTP: ${response.statusText}`);
@@ -19,7 +19,7 @@ async function obtenerServicios() {
     return data;
 }
 /**
- * Crea de forma segura una tarjeta de servicio utilizando nodos del DOM (Previene XSS).
+ * Crea una tarjeta de servicio usando nodos del DOM.
  */
 function crearTarjetaServicio(service, modal) {
     const article = document.createElement("article");
